@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- https://developer.mozilla.org/en-US/docs/Learn/Forms/Basic_native_form_controls#file_picker -->
+    <title>File picker</title>
+</head>
+<body>
+    <h1>File picker</h1>
+    <div>
+        <h2>All device</h2>
+        <h3>Single</h3>
+        <input type="file" name="file" id="file" accept="image/*">
+
+        <h3>multiple</h3>
+        <input type="file" name="file" id="file" accept="image/*" multiple>
+    </div>
+    <div>
+        <h2>Another Mobile options</h2>
+        <input type="file" accept="image/*;capture=camera">
+        <input type="file" accept="video/*;capture=camcorder">
+        <input type="file" accept="audio/*;capture=microphone">
+    </div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <style>
+        body {
+            background-color: #fff;
+            color: #333;
+            font: 1em / 1.4 Helvetica Neue, Helvetica, Arial, sans-serif;
+            padding: 1em;
+            margin: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+    </style>
+    <title>Form structure</title>
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <legend>Personal details</legend>
+            <p>
+                <label for="name"><span>Name:</span></label>
+                <input type="text" id="name" name="name">
+            </p>
+            <p>
+                <label for="age"><span>Age:</span></label>
+                <input type="number" id="age" name="age">
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Comment information</legend>
+            <p>
+                <label for="comment"><span>Comment:</span></label>
+                <input type="text" id="comment" name="comment">
+            </p>
+            <p>
+                <label for="email"><span>Email:</span></label>
+                <input type="email" id="email" name="email">
+            </p>
+        </fieldset>
+    </form>
+</body>
+
+</html>

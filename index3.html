@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox</title>
+</head>
+<body>
+    <form action="/tosomeplace" method="post">
+        <section>
+            <fieldset>
+                <legend>Choose all the vegetables you like to eat</legend>
+                <ul>
+                  <li>
+                    <label for="carrots">Carrots</label>
+                    <input type="checkbox" id="carrots" name="vegetable" value="carrots" checked>
+                  </li>
+                  <li>
+                    <label for="peas">Peas</label>
+                    <input type="checkbox" id="peas" name="vegetable" value="peas">
+                  </li>
+                  <li>
+                    <label for="cabbage">Cabbage</label>
+                    <input type="checkbox" id="cabbage" name="vegetable" value="cabbage">
+                  </li>
+                </ul>
+              </fieldset>
+        </section>
+        <section>
+            <button type="submit">Enviar</button>
+        </section>
+    </form>
+</body>
+</html>
