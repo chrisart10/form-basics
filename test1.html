@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <style>
+        body {
+            background-color: #fff;
+            color: #333;
+            font: 1em / 1.4 Helvetica Neue, Helvetica, Arial, sans-serif;
+            padding: 1em;
+            margin: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+    </style>
+    <title>Basic controls</title>
+</head>
+
+<body>
+    <h1>Basic controls</h1>
+    <h2>Basic controls 1</h2>
+    <p>This task starts you off nice and gently by asking you to create two &#60;input&#62; elements, for a user's ID
+        and password, along with a submit button.</p>
+    <ol>
+        <li>Create appropriate inputs for user ID and password.</li>
+        <li>You should also associate them with their text labels semantically.</li>
+        <li>Create a submit button inside the remaining list item, with button text of "Log in".</li>
+    </ol>
+    <h3>Solution</h3>
+    <section>
+        <form>
+            <fieldset>
+                <legend>User credentials</legend>
+                <p>
+                    <label for="userId">User ID</label>
+                    <input type="text" name="userID" id="userId">
+                </p>
+                <p>
+                    <label for="pass">Password</label>
+                    <input type="password" name="password" id="pass">
+                </p>
+                <p>
+                    <button type="submit">Log in</button>
+                </p>
+            </fieldset>
+        </form>
+    </section>
+    <h2>Basic controls 2</h2>
+    <p>The next task requires you to create working sets of checkboxes and radio buttons, from the provided text labels.
+    </p>
+    <ol>
+        <li>Turn the first &#60;fieldset&#62;'s contents into a set of radio buttons — you should only be able to select
+            one pony character at once.</li>
+        <li>Make it so that the first radio button is selected upon page load.</li>
+        <li>Turn the second &#60;fieldset&#62;'s content into a set of checkboxes.</li>
+        <li>Add a couple more hotdog choices of your own.</li>
+        <li>Try updating the live code below to recreate the finished example:</li>
+    </ol>
+    <h3>Solution</h3>
+    <form>
+        <fieldset>
+            <legend>Who is your favorite pony?</legend>
+            <ul>
+                <li>
+                    <input type="radio" name="pony" id="pinkie">
+                    <label for="pinkie">Pinkie Pie</label>
+                </li>
+                <li>
+                    <input type="radio" name="pony" id="rainbow">
+                    <label for="rainbow">Rainbow Dash</label>
+                </li>
+                <li>
+                    <input type="radio" name="pony" id="twilight">
+                    <label for="twilight">Twilight Sparkle</label>
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>Hotdog preferences</legend>
+            <ul>
+                <li>
+                    <input type="checkbox" name="hotdog" id="vegan">
+                    <label for="vegan">Vegan</label>
+
+                </li>
+                <li>
+                    <input type="checkbox" name="hotdog" id="onions">
+                    <label for="onions">Onions</label>
+                </li>
+            </ul>
+        </fieldset>
+        <button>Submit</button>
+        <h2>Basic controls 3</h2>
+        <p>The final task in this set requires you to create a file picker.</p>
+
+        <ol>
+            <li>Create a basic file picker.</li>
+            <li>Allow the user to pick moltiple files at once.</li>
+            <li>Allow the file picker to accept JPG and PNG images only.</li>
+        </ol>
+        <h3>Solution</h3>
+        <form>
+            <ul>
+                <li>
+                    <!-- https://stackoverflow.com/questions/4328947/limit-file-format-when-using-input-type-file -->
+                    <label for="gallery-img">Choose gallery images to upload</label>
+                    <input type="file" accept=".JPG,.PNG" id="gallery-img" multiple>
+                </li>
+            </ul>
+        </form>
+    </form>
+</body>
+
+</html>
