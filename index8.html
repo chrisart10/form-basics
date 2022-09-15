@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <title>The HTML5 input types</title>
+</head>
+
+<body>
+    <h1>The HTML5 input types</h1>
+
+    <h2>E-mail address field</h2>
+    <form>
+        <section>
+            <ul>
+                <li>
+                    <label for="email1">Emails</label>
+                    <input type="email" id="email1" name="email" multiple>
+                </li>
+                <li>
+                    <!--
+                        reference:https://developer.mozilla.org/en-US/docs/Learn/Forms/HTML5_input_types#e-mail_address_field:~:text=Note%20that%20a,article%20later%20on.
+                        reference:https://stackoverflow.com/questions/5601647/html5-email-input-pattern-attribute#:~:text=96,z%5D%7B2%2C4%7D%24%22%20/%3E
+                        -->
+                    <label for="email2">Emails with pattern</label>
+                    <input type="email" id="email2" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                        multiple>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <button type="submit">submit</button>
+        </section>
+    </form>
+
+    <h2>Search field</h2>
+    <form>
+        <section>
+            <label for="search">Search</label>
+            <input type="search" name="search" id="search">
+            <button type="submit">search</button>
+        </section>
+    </form>
+
+    <h2>Phone number field</h2>
+    <form>
+        <section>
+            <label for="tel">Telephone</label>
+            <input type="tel" name="telephone" id="tel" pattern="[0-9]{3}-[0-9]{4}">
+        </section>
+        <section>
+            <button type="submit">send</button>
+        </section>
+    </form>
+
+    <h2>URL field</h2>
+    <form>
+        <section>
+            <label for="url">URL</label>
+            <input type="url" name="url" id="url">
+            <button type="submit">submit</button>
+        </section>
+    </form>
+
+    <h2>Numeric field</h2>
+    <form>
+        <section>
+            <label for="num">Number</label>
+            <input type="number" name="age" id="age" min="1" max="5" step="0.1" />
+            <button type="submit">submit</button>
+        </section>
+    </form>
+
+    <h2>Slider controls</h2>
+    <form>
+        <section>
+            <label for="price">Choose a maximum house price:</label>
+            <input type="range" name="price" id="price" min="30000" max="1000000" value="500000" step="1000">
+            <div class="price-output"></div>
+        </section>
+    </form>
+
+    <h2>Date and time pickers</h2>
+    <form>
+        <section>
+            <ul>
+                <li><input type="datetime-local" name="datetime" id="datetime" /></li>
+                <li><input type="month" name="month" id="month" /></li>
+                <li><input type="time" name="time" id="time" /></li>
+                <li><input type="week" name="week" id="week" /></li>
+                <li>
+                    <label for="myDate">When are you available this summer?</label>
+                    <input type="date" name="myDate" min="2013-06-01" max="2013-08-31" step="7" id="myDate" />
+                </li>
+            </ul>
+        </section>
+    </form>
+
+    <h2>Color picker control</h2>
+    <form>
+        <section><input type="color" name="color" id="color" /></section>        
+        <section><button type="submit">submit</button></section>
+    </form>
+    <script>
+        const price = document.querySelector("#price");
+        const output = document.querySelector(".price-output");
+
+        output.textContent = price.value;
+
+        price.addEventListener("input", () => {
+            output.textContent = price.value;
+        });
+    </script>
+</body>
+
+</html>
