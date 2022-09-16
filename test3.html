@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <style>
+        textarea {
+            vertical-align: top;
+        }
+    </style>
+    <title>Test your skills: Other controls</title>
+</head>
+
+<body>
+    <h1>Test your skills: Other controls</h1>
+    <h2>Other controls 1</h2>
+    <p>In our first "other controls" assessment, we'll get you to create a multi-line text input.</p>
+    <ol>
+        <li>Create a basic multi-line text input.</li>
+        <li>Associate it semantically with the provided "Comment" label.</li>
+        <li>Give the input 35 columns, and 10 rows of space in which to add comments.</li>
+        <li>Give the comments a maximum length of 100 characters.</li>
+    </ol>
+    <form>
+        <h2>Enter your comment</h2>
+        <ul>
+            <li>
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name">
+            </li>
+            <li>
+                <label for="comment">Comment:</label>
+                <!-- add your input here  -->
+                <textarea name="comment" id="comment" cols="35" rows="100" maxlength="100"></textarea>
+            </li>
+            <li>
+                <button>Submit comment</button>
+            </li>
+        </ul>
+    </form>
+    <h2>Other controls 2</h2>
+    <p>Now it's time to have a go at implementing a drop-down select menu, to allow a user to pick their favorite food
+        from the choices provided.
+    </p>
+    <ol>
+        <li>Create your basic select box structure.</li>
+        <li>Associate it semantically with the provided "food" label.</li>
+        <li>Inside the list, split the choices up into 2 subgroups — "mains" and "snacks".</li>
+    </ol>
+
+    <form>
+        <ul>
+            <li>
+                <label for="food">Pick your favorite food:</label>
+                <select id="food" name="food">
+                    <optgroup label="mains">
+                        <option value="Salad">Salad</option>
+                        <option value="Curry">Curry</option>
+                        <option value="Pizza">Pizza</option>
+                        <option value="Fajitas">Fajitas</option>
+                    </optgroup>
+                    <optgroup label="snacks">
+                        <option value="Biscuits">Biscuits</option>
+                        <option value="Crisps">Crisps</option>
+                        <option value="Fruit">Fruit</option>
+                        <option value="Breadsticks">Breadsticks</option>
+                    </optgroup>
+                </select>
+            </li>
+        </ul>
+    </form>
+    <h2>Other controls 3</h2>
+    <p>
+        In our final task of this set, we start with much the same list of food choices. However, this time we want to do
+        things differently:
+    </p>
+    <ol>
+        <li>Create a basic text input that is semantically associated with the provided label.</li>
+        <li>Put the food choices into a list that can be associated with a form input.</li>
+        <li>Associate the list with your text input, so that when you type characters, any of the list options that match the character sequence are given in a dropdown list as autocomplete suggestions.</li>
+    </ol>
+    <form>
+        <ul>
+          <li>
+            <label for="food">Enter your favorite food:</label>
+            <input type="text" name="food" id="food" list="foods">
+                <datalist id="foods">
+                    <option value="Salad">Salad</option>
+                    <option value="Curry">Curry</option>
+                    <option value="Pizza">Pizza</option>
+                    <option value="Fajitas">Fajitas</option>
+                    <option value="Biscuits">Biscuits</option>
+                    <option value="Crisps">Crisps</option>
+                    <option value="Fruit">Fruit</option>
+                    <option value="Breadsticks">Breadsticks</option>
+                </datalist>
+        </ul>
+      </form>
+          
+</html>

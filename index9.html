@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+  <style>
+    textarea {
+      vertical-align: top;
+      resize: none;
+    }
+  </style>
+  <title>Other form controls</title>
+</head>
+
+<body>
+  <h1>Other form controls</h1>
+  <h2>Multi-line text fields</h2>
+  <form>
+    <!-- reference about cols and rows unit:https://developer.mozilla.org/en-US/docs/Learn/Forms/Other_form_controls#other_form_features:~:text=across%20several%20lines%3A-,cols,using%20CSS.%20The%20default%20value%20if%20none%20is%20specified%20is%202.,-wrap -->
+    <textarea cols="10" rows="10"></textarea>
+    <button>send</button>
+  </form>
+  <h2>Drop-down controls</h2>
+  <h3>Select box</h3>
+  <form>
+    <select id="simple" name="simple">
+      <option>Banana</option>
+      <option selected>Cherry</option>
+      <option>Lemon</option>
+    </select>
+    <button>submit</button>
+  </form>
+  <h3>Using optgroup</h3>
+  <form>
+    <select id="groups" name="food">
+      <optgroup label="fruits">
+        <option value="platano">Banana</option>
+        <option selected>Cherry</option>
+        <option>Lemon</option>
+      </optgroup>
+      <optgroup label="vegetables">
+        <option>Carrot</option>
+        <option>Eggplant</option>
+        <option>Potato</option>
+      </optgroup>
+    </select>
+    <button>submit</button>
+  </form>
+  <h2>Multiple choice select box</h2>
+  <form>
+    <select id="multi" name="foods" multiple size="5">
+      <optgroup label="fruits">
+        <option>Banana</option>
+        <option selected>Cherry</option>
+        <option>Lemon</option>
+      </optgroup>
+      <optgroup label="vegetables">
+        <option>Carrot</option>
+        <option>Eggplant</option>
+        <option>Potato</option>
+      </optgroup>
+    </select>
+    <button>submit</button>
+  </form>
+
+  <h2>Autocomplete box</h2>
+  <h3>Datalist</h3>
+  <form>
+    <label for="myFruit">What's your favorite fruit?</label>
+    <input type="text" name="myFruit" id="myFruit" list="mySuggestion" />
+    <datalist id="mySuggestion">
+      <option>Apple</option>
+      <option>Banana</option>
+      <option>Blackberry</option>
+      <option>Blueberry</option>
+      <option>Lemon</option>
+      <option>Lychee</option>
+      <option>Peach</option>
+      <option>Pear</option>
+    </datalist>
+    <button>submit</button>
+  </form>
+  <h3>Datalist with fallback</h3>
+
+  <form>
+    <label for="myFruit">What is your favorite fruit? (With fallback)</label>
+    <input type="text" id="myFruit" name="fruit" list="fruitList" />
+
+    <datalist id="fruitList">
+      <label for="suggestion">or pick a fruit</label>
+      <select id="suggestion" name="altFruit">
+        <option>Apple</option>
+        <option>Banana</option>
+        <option>Blackberry</option>
+        <option>Blueberry</option>
+        <option>Lemon</option>
+        <option>Lychee</option>
+        <option>Peach</option>
+        <option>Pear</option>
+      </select>
+    </datalist>
+    <button>submit</button>
+  </form>
+  <h3>Datalist color</h3>
+  <form>
+    <input type="color" value="#000000" list="colors" />
+    <datalist id="colors">
+      <option>#ff0000</option>
+      <option>#0000ff</option>
+      <option>#00ff00</option>
+      <option>#ffff00</option>
+      <option>#00ffff</option>
+    </datalist>
+  </form>
+  <h3>Datalist range</h3>
+  <form>
+    <input type="range" value="0" min="0" max="100" list="numbers" />
+    <datalist id="numbers">
+      <option>10</option>
+      <option>30</option>
+      <option>50</option>
+      <option>70</option>
+      <option>100</option>
+    </datalist>
+  </form>
+  <h2>Other form features</h2>
+  <h3>Meters and progress bars</h3>
+  <!-- reference:https://developer.mozilla.org/en-US/docs/Learn/Forms/Other_form_controls#meters_and_progress_bars -->
+  <form>
+    <p>
+      <progress max="100" value="75">75/100</progress>
+    </p>
+    <p>
+      <!-- 
+      The content inside the <meter> element is a fallback for browsers that don't support the element and for assistive technologies to vocalize it.
+       -->
+      <meter min="0" max="100" value="75" low="33" high="66" optimum="70">75</meter>
+    </p>
+  </form>
+
+  <form>
+    <p>
+      <label for="file">Choose an image to upload</label>
+      <input type="file" name="file" id="file" accept="image/*" multiple>
+    </p>
+    <div>
+      <input type="hidden" id="timestamp" name="timestamp" value="1286705410">
+    </div>
+    <p>
+      <input type="image" name="pos" alt="cat" src="https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492_1280.jpg"
+        width="200px">
+    </p>
+
+  </form>
+</body>
+
+</html>
