@@ -1,0 +1,8 @@
+Organizing your assets
+This is where the fun begins! Before we start coding, we need three additional assets:
+
+1-The postcard background — download this image and save it in the same directory as your working HTML file.
+2-A typewriter font: The "Mom's Typewriter" font from dafont.com — download the TTF file into the same directory as above.
+3-A hand drawn font: The "Journal" font from dafont.com — download the TTF file into the same directory as above.
+
+reference:https://developer.mozilla.org/en-US/docs/Learn/Forms/Styling_web_forms

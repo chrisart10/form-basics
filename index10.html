@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <style>
+        /* 
+        font and text 
+        Normalize.css from necolas repo has applied this correction.
+        */
+
+        form {
+            font-size: 1.4rem;
+        }
+
+        /* 
+        Box sizing
+        Normalize set box-sizing: border-box; to textarea, input, button. 
+        Input and Textarea are box-sizing: border-box because normilize doesnt applied change. By default is in content-box.
+        */
+        input,
+        textarea,
+        select,
+        button {
+            width: 250px;
+            padding: 2px;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        /* legend placement */
+        input[type="checkbox"],input[type="radio"]{
+            width: inherit;
+        }
+
+        fieldset {
+            position: relative;
+        }
+
+        legend {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    </style>
+    <title>Styling web forms</title>
+</head>
+
+<body>
+    <h1>The good from <a
+            href="https://developer.mozilla.org/en-US/docs/Learn/Forms/Styling_web_forms#the_good_2">MDN</a></h1>
+    <h2>Fonts and text and box-sizing</h2>
+    <form>
+        <!-- Label after to compare input size -->
+        <p>
+            <input type="text" id="text-id" placeholder="Which font do I use?">
+            <label for="text-id">Text</label>
+        </p>
+        <p>
+            <input type="date" id="date-id">
+            <label for="date-id">Date</label>
+        </p>
+        <p>
+            <select name="select" id="select-font">
+                <option value="" selected>Which font do I use</option>
+                <option value="font1">Font 1</option>
+                <option value="font2">Font 2</option>
+                <option value="font3">Font 3</option>
+            </select>
+            <label for="select-font">Select</label>
+        </p>
+        <p>
+            <textarea name="ta-example" id="ta" cols="10" rows="2"> Which font do i use</textarea>
+            <label for="ta">Textarea</label>
+        </p>
+        <p>
+            <input type="submit" value="Which font do I use?">
+        </p>
+        <p>
+            <button>Which font do I use?</button>
+        </p>
+    </form>
+
+    <h2>Legend placement</h2>
+    <form>
+        <fieldset>
+            <legend>Choose all the vegetables you like to eat</legend>
+            <ul>
+                <li>
+                    <label for="carrots">Carrots</label>
+                    <input type="checkbox" name="vegetables" id="carrots">
+                </li>
+                <li>
+                    <label for="peas">Peas</label>
+                    <input type="checkbox" name="vegetables" id="peas">
+                </li>
+                <li>
+                    <label for="cabbage">Cabbage</label>
+                    <input type="checkbox" name="vegetables" id="cabbage">
+                </li>
+                <li>
+                    <label for="cauliflower">Cauliflower</label>
+                    <input type="checkbox" name="vegetables" id="cauliflower">
+                </li>
+                <li>
+                    <label for="broccoli">Broccoli</label>
+                    <input type="checkbox" name="vegetables" id="broccoli">
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>Choose all the vegetables you like to eat</legend>
+            <ul>
+                <li>
+                    <label for="carrots-r">Carrots</label>
+                    <input type="radio" name="vegetables" id="carrots-r">
+                </li>
+                <li>
+                    <label for="peas-r">Peas</label>
+                    <input type="radio" name="vegetables" id="peas-r">
+                </li>
+                <li>
+                    <label for="cabbage-r">Cabbage</label>
+                    <input type="radio" name="vegetables" id="cabbage-r">
+                </li>
+                <li>
+                    <label for="cauliflower-r">Cauliflower</label>
+                    <input type="radio" name="vegetables" id="cauliflower-r">
+                </li>
+                <li>
+                    <label for="broccoli-r">Broccoli</label>
+                    <input type="radio" name="vegetables" id="broccoli-r">
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+
+</body>
+
+</html>
