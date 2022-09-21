@@ -31,11 +31,16 @@
             box-sizing: border-box;
         }
 
-        /* legend placement */
-        input[type="checkbox"],input[type="radio"]{
-            width: inherit;
+        /* 
+        Fix checkbox and radio width. Start with his initial value
+        reference: https://developer.mozilla.org/en-US/docs/Web/CSS/inherit
+        */
+        input[type="checkbox"],
+        input[type="radio"] {
+            width: initial;
         }
 
+        /* legend placement */
         fieldset {
             position: relative;
         }
@@ -50,8 +55,9 @@
 </head>
 
 <body>
-    <h1>The good from <a
-            href="https://developer.mozilla.org/en-US/docs/Learn/Forms/Styling_web_forms#the_good_2">MDN</a></h1>
+    <h1>The good from
+        <a href="https://developer.mozilla.org/en-US/docs/Learn/Forms/Styling_web_forms#the_good_2">MDN</a>
+    </h1>
     <h2>Fonts and text and box-sizing</h2>
     <form>
         <!-- Label after to compare input size -->
